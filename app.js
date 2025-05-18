@@ -104,7 +104,9 @@ passport.deserializeUser(User.deserializeUser());
 //     res.send(registereduser);
 // });
 
-
+app.get("/", (req,res) =>{
+    res.redirect("/listings");
+})
 // Listing routes
 app.use("/listings",listingRouter);
 // Review routes
